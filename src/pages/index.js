@@ -52,7 +52,7 @@ const IndexPage = () => {
 
   return <Layout>
     <SEO title="Home" />
-    <div className="bg-cover bg-no-repeat bg-black h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty_ie7qef.jpg')"}}>
+    <div className="bg-cover lg:bg-no-repeat bg-black h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty_ie7qef.jpg')"}}>
       <div className="container mx-auto flex justify-center md:justify-start items-center h-full">
         <div className="md:inline-block text-center md:text-left">
           <h1 className="text-white text-3xl md:text-5xl text-center block md:text-left font-bold font-futura uppercase tracking-widest">{page.Title}</h1>
