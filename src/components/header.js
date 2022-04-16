@@ -9,7 +9,7 @@ function Header({ siteTitle }) {
     <nav className=" w-full absolute z-40">
       <div className=" container mx-auto">
       <div className="md:flex flex-wrap items-center justify-between px-6 md:px-0 py-6 z-40">
-      <div className="hidden md:flex items-center flex-shrink-0 mr-6 text-white">
+      <div className="hidden lg:flex items-center flex-shrink-0 mr-6 text-white">
         <span className="text-xl font-futura font-semibold tracking-tight">
           {siteTitle}
         </span>

@@ -19,9 +19,21 @@ a {
 @tailwind components;
 @tailwind utilities;
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:560px) {
 	.hero {
 		background-position: -90%;
+	}
+}
+
+@media screen and (min-width:560px) and (max-width:640px) {
+	.hero {
+		background-position: -130%;
+	}
+}
+
+@media screen and (min-width:640px) and (max-width:800px) {
+	.hero {
+		background-position: -180%;
 	}
 }
 
