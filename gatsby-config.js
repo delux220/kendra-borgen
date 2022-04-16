@@ -1,3 +1,16 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+console.log(process.env.STRAPI_API_URL);
+
+const strapiConfig = {
+  apiURL: process.env.STRAPI_API_URL,
+  accessToken: process.env.STRAPI_TOKEN,
+  collectionTypes: ['show', 'location', 'video'],
+  singleTypes: ['contact-page', 'seo', 'social-media', 'about-page', 'videos-page', 'home-page'],
+};
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby TailwindCSS Starter`,
@@ -8,6 +21,11 @@ module.exports = {
     THE_FLAG: false
   },
   plugins: [
+    `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-source-strapi`,
+      options: strapiConfig,
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

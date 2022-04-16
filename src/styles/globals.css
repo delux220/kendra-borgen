@@ -1,3 +1,6 @@
+html {
+	background-color:#000;
+}
 @tailwind base;
 
 h1 {
@@ -15,3 +18,16 @@ a {
 
 @tailwind components;
 @tailwind utilities;
+
+@media screen and (max-width:600px) {
+	.hero {
+		background-position: -90%;
+	}
+}
+
+.iframe-fit iframe {
+	max-width:100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap&family=Raleway:wght@100;200;300;400;700');
+@import url("https://use.typekit.net/atu8bcp.css");

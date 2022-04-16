@@ -6,16 +6,18 @@ function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-gray-800">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
-        <span className="text-xl font-semibold tracking-tight">
+    <nav className=" w-full absolute z-40">
+      <div className=" container mx-auto">
+      <div className="md:flex flex-wrap items-center justify-between px-6 md:px-0 py-6 z-40">
+      <div className="hidden md:flex items-center flex-shrink-0 mr-6 text-white">
+        <span className="text-xl font-futura font-semibold tracking-tight">
           {siteTitle}
         </span>
       </div>
       <div className="block lg:hidden">
         <button
           onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-white border border-white rounded hover:text-white hover:border-white"
+          className="flex items-center px-3 py-3 z-40 text-white border border-white hover:text-white hover:border-white"
         >
           <svg
             className="w-3 h-3 fill-current"
@@ -30,33 +32,44 @@ function Header({ siteTitle }) {
       <div
         className={`${
           isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+        } w-full block flex-grow lg:flex lg:items-center lg:w-auto z-40`}
       >
-        <div className="text-sm lg:flex-grow">
-          <Link
+        <div className="text-sm lg:flex-grow bg bg-black/90 md:bg-transparent w-1/2 mt-4 md:mt-0 z-40 md:w-auto p-4 md:p-0">
+        <Link
             to={`/`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+            className="block md:mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
           >
             Home
           </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+        <Link
+            to={`/about`}
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
           >
-            page 2
+            About
+          </Link>
+          <Link
+            to={`/#shows`}
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+          >
+            Shows
+          </Link>
+          
+          <Link
+            to={`/media`}
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+          >
+            Media
+          </Link>
+       
+          <Link
+            to={`/contact`}
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+          >
+            Contact
           </Link>
         </div>
-        <div>
-          <a
-            href="https://github.com/kosvrouvas/gatsby-tailwindcss-starter"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-black hover:bg-white lg:mt-0"
-          >
-            Download
-          </a>
-        </div>
+      </div>
+      </div>
       </div>
     </nav>
   )
