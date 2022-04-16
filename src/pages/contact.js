@@ -90,7 +90,7 @@ const ContactPage = () => {
           <form action={'#'} method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact" onSubmit={validate} id="contact-form" data-netlify-recaptcha="true">
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
-            <label className="font-sans text-gray-400 mb-1 text-sm block uppercase">Name </label>
+            <label className="font-sans text-gray-400 mb-1 text-sm block uppercase">Name</label>
             <input type="text" name="name" maxLength="255" className="p-3 bg-white block w-full mb-5" value={name} onChange={(e) => setName(e.target.value)}/>
             <label className="font-sans text-gray-400 block text-sm mb-1 uppercase">Email Address</label>
             <input type="email" name="email" maxLength="255" className="p-3 bg-white block w-full mb-5" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@email.com"/>

@@ -78,10 +78,10 @@ const IndexPage = () => {
           {
             shows.map(show => <div key={`show-${show.id}`} className="grid grid-cols-2 md:grid-cols-3 w-full mb-10 clear-both overflow-auto block">
                 <div className="">
-                  <div className="bg-white float-left p-3 text-center w-20 h-20 flex justify-center items-center">
+                  <div className="bg-white float-left p-3 text-center w-16 md:w-20 h-16 md:h-20 flex justify-center items-center">
                     <h3 className="text-black font-bold uppercase font-futura" style={{fontWeight:'700'}}>{moment(show.DateTime.StartDate).format('MMM')}<br/>{moment(show.DateTime.StartDate).format('D')}</h3>
                   </div>
-                  <div className="bg-black float-left p-3 border border-white text-center w-20 h-20 flex justify-center items-center">
+                  <div className="bg-black float-left p-3 border border-white text-center w-16 md:w-20 h-16 md:h-20 flex justify-center items-center">
                   <h3 className="text-white font-bold uppercase  font-futura">{moment(show.DateTime.StartDate).format('h:mm a')}</h3>
                   </div>
                 </div>
