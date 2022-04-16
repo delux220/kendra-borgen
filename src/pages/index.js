@@ -52,7 +52,7 @@ const IndexPage = () => {
 
   return <Layout>
     <SEO title="Home" />
-    <div className="bg-cover h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty.jpg')"}}>
+    <div className="bg-cover bg-no-repeat bg-black h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty_ie7qef.jpg')"}}>
       <div className="container mx-auto flex justify-center md:justify-start items-center h-full">
         <div className="md:inline-block text-center md:text-left">
           <h1 className="text-white text-3xl md:text-5xl text-center block md:text-left font-bold font-futura uppercase tracking-widest">{page.Title}</h1>
@@ -62,11 +62,18 @@ const IndexPage = () => {
             <a href={socialMedia.Twitter} className="text-white hover:text-gray-400"  target="_blank"><FontAwesomeIcon icon={faTwitter} className="text-2xl"/></a>
             <a href={socialMedia.YouTube} className="text-white hover:text-gray-400"  target="_blank"><FontAwesomeIcon icon={faYoutube} className="text-2xl"/></a>
             <a href={socialMedia.Instagram} className="text-white hover:text-gray-400"  target="_blank"><FontAwesomeIcon icon={faInstagram} className="text-2xl"/></a>
+            
           </div>
 
         </div>
+
       </div>
     </div>
+    <div className="bg-black">
+      <div className="container mx-auto text-center">
+        <small className="text-gray-600">Photo credit: <a className="text-cyan-600" href="https://twitter.com/korneeldefeyter" target="_blank">@korneeldefeyter</a></small>
+      </div>
+    </div>    
     <div className="bg-black" id="shows">
       <div className="container max-w-5xl mx-auto py-20 px-5 md:px-0">
         <div className="text-center">
