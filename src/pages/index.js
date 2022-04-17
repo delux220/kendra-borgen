@@ -111,11 +111,13 @@ const IndexPage = () => {
     </div>
     <div className="bg-black">
       <div className="container mx-auto  max-w-3xl px-5 md:px-0">
+      <form action="https://kendraborgen.us14.list-manage.com/subscribe/post?u=935ddc2ec69be34aa4f93aedc&id=73663b4e86" method="POST">
         <h3 className="font-futura uppercase tracking-widest text-white">Receive updates in your inbox</h3>
         <div className="grid md:grid-cols-3 gap-2">
-          <input type="email" className="md:col-span-2 p-3 bg-white font-sans" placeholder="Your email address"/>
-          <button className="border border-white text-white font-futura font-bold py-3 uppercase">Subscribe</button>
+          <input name="EMAIL" type="email" className="md:col-span-2 p-3 bg-white font-sans" placeholder="Your email address"/>
+          <button className="border border-white text-white font-futura font-bold py-3 uppercase" type="submit">Subscribe</button>
         </div>
+        </form>
       </div>
     </div>
   </Layout>
