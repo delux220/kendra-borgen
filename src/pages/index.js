@@ -52,8 +52,8 @@ const IndexPage = () => {
 
   return <Layout>
     <SEO title="Home" />
-    <div className="bg-cover lg:bg-no-repeat bg-black h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty_ie7qef.jpg')"}}>
-      <div className="container mx-auto flex justify-center md:justify-start items-center h-full">
+    <div className="bg-cover bg-fixed relative lg:bg-no-repeat bg-black h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty_ie7qef.jpg')"}}>
+      <div className="container mx-auto flex justify-center md:justify-start items-end h-full pb-32">
         <div className="md:inline-block text-center md:text-left">
           <h1 className="text-white text-3xl md:text-5xl text-center block md:text-left font-bold font-futura uppercase tracking-widest">{page.Title}</h1>
           <h3 className="text-white md:text-gray-400 text-center md:text-left  font-sans  uppercase tracking-widest mt-2">{page.Subtitle}</h3>
@@ -67,13 +67,13 @@ const IndexPage = () => {
 
         </div>
 
+      <div className="absolute w-full text-center md:text-left" style={{left: 0, bottom:0}}>
+      <div className="container mx-auto px-1 py-1">
+        <small className="text-gray-600">Photo credit: <a className="text-gray-300" href="https://twitter.com/korneeldefeyter" target="_blank">@korneeldefeyter</a></small>
       </div>
-    </div>
-    <div className="bg-black">
-      <div className="container mx-auto text-center">
-        <small className="text-gray-600">Photo credit: <a className="text-cyan-600" href="https://twitter.com/korneeldefeyter" target="_blank">@korneeldefeyter</a></small>
       </div>
-    </div>    
+      </div>
+    </div> 
     <div className="bg-black" id="shows">
       <div className="container max-w-5xl mx-auto py-20 px-5 md:px-0">
         <div className="text-center">
