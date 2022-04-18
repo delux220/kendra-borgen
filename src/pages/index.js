@@ -69,15 +69,15 @@ const IndexPage = () => {
 
       <div className="absolute w-full text-center md:text-left" style={{left: 0, bottom:0}}>
       <div className="container mx-auto px-1 py-1">
-        <small className="text-gray-600">Photo credit: <a className="text-gray-300" href="https://twitter.com/korneeldefeyter" target="_blank">@korneeldefeyter</a></small>
+        <small className="text-gray-300">Photo credit: <a className="text-gray-300 hover:text-white hover:font-bold" href="https://twitter.com/korneeldefeyter" target="_blank">@korneeldefeyter</a></small>
       </div>
       </div>
       </div>
     </div> 
     <div className="bg-black" id="shows">
-      <div className="container max-w-5xl mx-auto py-20 px-5 md:px-0">
+      <div className="container max-w-5xl mx-auto py-20 px-5 lg:px-0">
         <div className="text-center">
-          <h1 className="text-yellow-400 font-bold uppercase font-futura text-5xl mb-20 mt-10 tracking-widest">Upcoming Shows</h1>
+          <h1 className="text-yellow-400 font-bold uppercase font-futura text-3xl md:text-5xl mb-20 mt-10 tracking-widest">Upcoming Shows</h1>
         </div>  
           {shows.length == 0 && <div className="text-center">
               <p className="text-gray-400">Nothing right now. Check back soon for show dates.</p>
@@ -112,9 +112,9 @@ const IndexPage = () => {
     <div className="bg-black">
       <div className="container mx-auto  max-w-3xl px-5 md:px-0">
       <form action="https://kendraborgen.us14.list-manage.com/subscribe/post?u=935ddc2ec69be34aa4f93aedc&id=73663b4e86" method="POST">
-        <h3 className="font-futura uppercase tracking-widest text-white">Receive updates in your inbox</h3>
+        <h3 className="text-center md:text-left font-futura uppercase tracking-widest text-white">Receive updates in your inbox</h3>
         <div className="grid md:grid-cols-3 gap-2">
-          <input name="EMAIL" type="email" className="md:col-span-2 p-3 bg-white font-sans" placeholder="Your email address"/>
+          <input name="EMAIL" type="email" className="text-center md:text-left md:col-span-2 p-3 bg-white font-sans" placeholder="Your email address"/>
           <button className="border border-white text-white font-futura font-bold py-3 uppercase" type="submit">Subscribe</button>
         </div>
         </form>
