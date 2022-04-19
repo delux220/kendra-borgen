@@ -7,7 +7,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import moment from 'moment';
 
-const IndexPage = () => {
+const IndexPage = (props) => {
+
+  const {pageContext} = props;
+
+  const {events} = pageContext;
+
   const data = useStaticQuery(query);
 
   const today = new Date().toISOString().slice(0, 10);
@@ -22,7 +27,7 @@ const IndexPage = () => {
 
     let _shows = [];
 
-      data.allStrapiShow.edges.forEach(show => {
+      events.data.allStrapiShow.edges.forEach(show => {
 
         show.node.Dates.forEach(dt => {
           //alert(moment(dt.StartDate).isSameOrAfter(today));
@@ -50,10 +55,15 @@ const IndexPage = () => {
 
   }, []);
 
-  return <Layout>
+  return <div>
+    <div className="bg-cover fixed lg:bg-no-repeat bg-black w-screen z-0 h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty_ie7qef.jpg')"}}>
+      &nbsp;
+    </div> 
+
+        <div className="absolute w-screen z-10">
+    <Layout>
     <SEO title="Home" />
-    <div className="bg-cover bg-fixed relative lg:bg-no-repeat bg-black h-screen hero md:bg-center" style={{backgroundImage: "url('https://res.cloudinary.com/meshed-nyc/w_3000,c_fill,q_auto/KB1_kgacty_ie7qef.jpg')"}}>
-      <div className="container mx-auto flex justify-center md:justify-start items-end h-full pb-32">
+      <div className="container relative mx-auto h-screen flex justify-center md:justify-start items-end pb-32">
         <div className="md:inline-block text-center md:text-left">
           <h1 className="text-white text-3xl md:text-5xl text-center block md:text-left font-bold font-futura uppercase tracking-widest">{page.Title}</h1>
           <h3 className="text-white md:text-gray-400 text-center md:text-left  font-sans  uppercase tracking-widest mt-2">{page.Subtitle}</h3>
@@ -73,7 +83,7 @@ const IndexPage = () => {
       </div>
       </div>
       </div>
-    </div> 
+    
     <div className="bg-black" id="shows">
       <div className="container max-w-5xl mx-auto py-20 px-5 lg:px-0">
         <div className="text-center">
@@ -120,29 +130,14 @@ const IndexPage = () => {
         </form>
       </div>
     </div>
+
   </Layout>
+  </div>
+    </div>
 };
 
 export const query = graphql`
-query MyQuery($today: Date) {
-  allStrapiShow(filter: {Dates: {elemMatch: {StartDate: {gte: $today}}}}) {
-    edges {
-      node {
-        id
-        Title
-        Location {
-          Address1
-          Address2
-          Name
-          Website
-        }
-        Dates {
-          StartDate
-          TicketsURL
-        }
-      }
-    }
-  }
+query MyQuery {
   strapiHomePage {
     Title
     Subtitle
