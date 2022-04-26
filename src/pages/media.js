@@ -20,8 +20,8 @@ const MediaPage = () => {
 
     <SEO title={page.Title} />
     <div className="container mx-auto min-h-screen pt-20 px-6 md:px-0">
-    	<h1 className="font-futura text-yellow-400 uppercase text-3xl font-bold tracking-widest">{page.Title}</h1>
-      <p className="text-gray-100 mb-20">For more videos, visit my <a className="text-yellow-400 font-bold" href={socialMedia.YouTube}>YouTube Channel</a>.</p>
+    	<h1 className="font-futura text-red-500 uppercase text-3xl font-bold tracking-widest">{page.Title}</h1>
+      <p className="text-gray-100 mb-20">For more videos, visit my <a className="text-red-400 font-bold" href={socialMedia.YouTube}>YouTube Channel</a>.</p>
       <div className="grid md:grid-cols-2 gap-4">
         {
           videos.map((video, i) => <div key={`video-${i}`} className="pb-10">

@@ -87,7 +87,7 @@ const IndexPage = (props) => {
     <div className="bg-black" id="shows">
       <div className="container max-w-5xl mx-auto py-20 px-5 lg:px-0">
         <div className="text-center">
-          <h1 className="text-yellow-400 font-bold uppercase font-futura text-3xl md:text-5xl mb-20 mt-10 tracking-widest">Upcoming Shows</h1>
+          <h1 className="text-red-500 font-bold uppercase font-futura text-3xl md:text-5xl mb-20 mt-10 tracking-widest">Upcoming Shows</h1>
         </div>  
           {shows.length == 0 && <div className="text-center">
               <p className="text-gray-400">Nothing right now. Check back soon for show dates.</p>
@@ -103,8 +103,8 @@ const IndexPage = (props) => {
                   </div>
                 </div>
                 <div className="">
-                  <h1 className="text-white font-bold font-futura"><a href={show.DateTime.TicketsURL} target="_blank" className="text-white hover:text-yellow-400">{show.Title}</a></h1>
-                  <span className="font-bold text-yellow-300 text-sm">{show.Location.Name}&nbsp;</span>
+                  <h1 className="text-white font-bold font-futura"><a href={show.DateTime.TicketsURL} target="_blank" className="text-white hover:text-red-400">{show.Title}</a></h1>
+                  <span className="font-bold text-red-400 text-sm">{show.Location.Name}&nbsp;</span>
                   <span className=" text-gray-100 text-sm">{show.Location.Address1}</span><br/><span className=" text-gray-100 text-sm">{show.Location.Address2}</span>
                 </div>
                 <div className="hidden md:flex justify-end items-center">

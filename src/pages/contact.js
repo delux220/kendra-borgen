@@ -83,7 +83,7 @@ const ContactPage = () => {
     <div className="container mx-auto grid md:grid-cols-2 py-20 gap-5 md:px-0 px-5 min-h-screen">
       
       <div className="col-span-2 md:col-span-1">
-        <h1 className="text-yellow-400 font-bold tracking-widest font-futura uppercase text-3xl  mb-5">{page.Title}</h1>
+        <h1 className="text-red-500 font-bold tracking-widest font-futura uppercase text-3xl  mb-5">{page.Title}</h1>
         <div className="text-gray-200 mb-10">
           {page.Description}
         </div>

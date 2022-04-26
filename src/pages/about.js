@@ -22,7 +22,7 @@ const AboutPage = () => {
     		<GatsbyImage image={about.Photo.localFile.childImageSharp.gatsbyImageData} style={{zIndex:0}} className="max-w-full z-10" alt="Kendra Borgen"/>
     		</div>
     		<div className="">
-    			<h3 className="text-yellow-400 uppercase font-futura md:tracking-widest font-bold text-3xl mb-3">{about.Title}</h3>
+    			<h3 className="text-red-500 uppercase font-futura md:tracking-widest font-bold text-3xl mb-3">{about.Title}</h3>
     			<p className="text-white">{about.Description}</p>
     			<div className="hidden md:block my-5 pt-5 border-t border-white">
             <a href={socialMedia.Facebook} target="_blank"><FontAwesomeIcon icon={faFacebook} className="text-xl text-white mr-3"/></a>
