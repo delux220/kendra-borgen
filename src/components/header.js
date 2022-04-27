@@ -37,33 +37,33 @@ function Header({ siteTitle }) {
         <div className="text-sm lg:flex-grow bg bg-black/90 lg:bg-transparent w-1/2 mt-4 md:mt-0 z-40 md:w-1/3 lg:w-auto p-4 md:p-0">
         <Link
             to={`/`}
-            className="block md:mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+            className="block md:mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-red-400"
           >
             Home
           </Link>
         <Link
             to={`/about`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-red-400"
           >
             About
           </Link>
           <Link
             to={`/#shows`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-red-400"
           >
             Shows
           </Link>
           
           <Link
             to={`/media`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-red-400"
           >
             Media
           </Link>
        
           <Link
             to={`/contact`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-yellow-400"
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white uppercase font-sans hover:text-red-400"
           >
             Contact
           </Link>
