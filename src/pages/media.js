@@ -41,11 +41,12 @@ query MediaQuery {
   strapiVideosPage {
     Title
   }
-  allStrapiVideo {
+  allStrapiVideo(sort: {order: ASC, fields: Sort}) {
     edges {
       node {
-        YouTubeEmbedCode
+        Sort
         Caption
+        YouTubeEmbedCode
       }
     }
   }
