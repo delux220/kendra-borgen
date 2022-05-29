@@ -13,8 +13,8 @@ const strapiConfig = {
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby TailwindCSS Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter with TailwindCSS and common dev tools. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Kendra Borgen`,
+    description: `Comedian based in Amsterdam`,
     author: `@kosvrouvas`,
   },
   flags: {
@@ -40,13 +40,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Kendra Borgen`,
+        short_name: `Kendra Borgen`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#CC3333`,
+        theme_color: `#CC3333`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/512x512.png`, // This path is relative to the root of the site.
       },
     },
     {
