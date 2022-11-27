@@ -4,6 +4,8 @@ require('dotenv').config({
 
 console.log(process.env.STRAPI_API_URL);
 
+console.log('token', process.env.STRAPI_TOKEN);
+
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
